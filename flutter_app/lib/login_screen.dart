@@ -82,7 +82,6 @@ class LoginScreen extends StatelessWidget
 								var password = _passwordController.text;
 								var token = await tryLogin(username, password);
 								if(token != null) {
-									print(token);
 									storage.write(key: "urlToken", value: token);
 									Navigator.push(
 										context,
@@ -107,7 +106,6 @@ class LoginScreen extends StatelessWidget
 								else if(httpResultStatusCode == 409)
 									displayNotification(context, "Username exists!", "Sign up using different username or login.");
 								else {
-									print(httpResultStatusCode);
 									displayNotification(context, "Error!", "Something has gone wrong!");
 								}
 

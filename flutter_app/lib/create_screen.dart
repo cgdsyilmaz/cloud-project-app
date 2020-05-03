@@ -89,7 +89,6 @@ class CreateScreenState extends State<CreateScreen> {
 		}
 		else
 		{
-			print(httpResponse.statusCode);
 			throw Exception('Failed to get that shortened url for you! Another try maybe?');
 		}
 	}
